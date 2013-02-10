@@ -1,5 +1,5 @@
 # Model.js
-Model.js is a jQuery plugin. Work in jQuery or other compatible library (ex. jQMobi, Zepto). It also can work standalone, too.  
+Model.js is a jQuery plugin. Work in jQuery or other compatible library (ex. jQMobi, Zepto). It also can work standalone.  
 "Model" means "M" of client side MVC framework. By using with the [jQuery-View](https://github.com/knowledgecode/jquery-view.js), it has support a Model-View programming in the client side JavaScript.  
 
 ## Usage
@@ -149,6 +149,9 @@ Remove a validation function.
 
 ### clearValidations()
 Remove all validation functions.  
+
+### exports()
+Export the data managed by model.js.  
 
 ## License
 Model.js is available under the terms of the MIT license.  

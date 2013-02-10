@@ -399,4 +399,13 @@ describe('model', function () {
         });
     });
 
+    it('exports', function () {
+        var data = person.exports();
+
+        expect(data.name).toEqual(person.get('name'));
+        expect(data.age).toEqual(person.get('age'));
+        expect(data.favorite).toEqual(person.get('favorite'));
+        expect(data.isMarried).toEqual(person.get('isMarried'));
+    });
+
 });

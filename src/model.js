@@ -1,5 +1,5 @@
 /**
- * @preserve model.js v1.0.0 (c) 2013 knowledgecode | MIT licensed
+ * @preserve model.js v1.1.0 (c) 2013 knowledgecode | MIT licensed
  */
 /*global $ */
 /*jslint browser: true, nomen: true, plusplus: true */
@@ -273,10 +273,22 @@
                 observers = {};
             };
 
+            /**
+             * @name exports
+             * @function
+             * @return data
+             */
+            model.exports = function () {
+                return data;
+            };
+
             return model;
         };
 
-    if ($.fn) {
+    if (typeof module === 'object' && module.exports) {
+        // CommonJS
+        module.exports = f;
+    } else if ($ && $.fn) {
         // jQuery plugin
         $.fn[id] = f;
     } else {
