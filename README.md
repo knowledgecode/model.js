@@ -24,6 +24,11 @@ Create the instance. If omitted the argument, Create an empty object.
             isMarried: false
         });
 
+### get(keyName)
+Get the current value by key name.  
+
+    console.log('My name is ' + person.get('name') + '.');  // My name is John Smith.
+
 ### on(type, observer)
 ### on(observers)
 Add an observer. If the latter, be able to add more than one observers at once.  
